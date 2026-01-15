@@ -5,16 +5,8 @@ class Vsdf < Formula
   version "0.2.0"
   license "GPL-3.0-only"
 
-  # These dependencies will be automatically installed by Homebrew if not present
   on_macos do
     depends_on "molten-vk"
-  end
-
-  on_linux do
-    depends_on "vulkan-loader"
-  end
-
-  on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/jamylak/vsdf/releases/download/v#{version}/vsdf-macos-x86_64.tar.gz"
       # Replace this with the SHA256 checksum of the x86_64 macOS release tarball
@@ -27,6 +19,7 @@ class Vsdf < Formula
   end
 
   on_linux do
+    depends_on "vulkan-loader"
     if Hardware::CPU.intel?
       url "https://github.com/jamylak/vsdf/releases/download/v#{version}/vsdf-linux-x86_64.tar.gz"
       # Replace this with the SHA256 checksum of the Linux release tarball
