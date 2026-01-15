@@ -6,8 +6,13 @@ class Vsdf < Formula
   license "GPL-3.0-only"
 
   # These dependencies will be automatically installed by Homebrew if not present
-  depends_on "molten-vk" => :on_macos
-  depends_on "vulkan-loader" => :on_linux
+  on_macos do
+    depends_on "molten-vk"
+  end
+
+  on_linux do
+    depends_on "vulkan-loader"
+  end
 
   on_macos do
     if Hardware::CPU.intel?
