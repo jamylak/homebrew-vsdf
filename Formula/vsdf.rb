@@ -11,11 +11,11 @@ class Vsdf < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jamylak/vsdf/releases/download/v#{version}/vsdf-macos-x86_64.tar.gz"
+      url "https://github.com/jamylak/vsdf/releases/download/#{version}/vsdf-macos-x86_64.tar.gz"
       # Replace this with the SHA256 checksum of the x86_64 macOS release tarball
       sha256 "sha256:601ea94c231ce11a5c23a6cb18f6197ee34f3939f4da8d645e9689183fcf5d8e"
     elsif Hardware::CPU.arm?
-      url "https://github.com/jamylak/vsdf/releases/download/v#{version}/vsdf-macos-arm64.tar.gz"
+      url "https://github.com/jamylak/vsdf/releases/download/#{version}/vsdf-macos-arm64.tar.gz"
       # Replace this with the SHA256 checksum of the arm64 macOS release tarball
       sha256 "sha256:40412be090f8985ccce4f45c24658b48223b5c52a54aae3f22e609610dfbff3b"
     end
@@ -23,7 +23,7 @@ class Vsdf < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jamylak/vsdf/releases/download/v#{version}/vsdf-linux-x86_64.tar.gz"
+      url "https://github.com/jamylak/vsdf/releases/download/#{version}/vsdf-linux-x86_64.tar.gz"
       # Replace this with the SHA256 checksum of the Linux release tarball
       sha256 "sha256:573a9823c0f4a6d4a6ff7904a852b598c85145979462a283857e5e6205eb9771"
     end
