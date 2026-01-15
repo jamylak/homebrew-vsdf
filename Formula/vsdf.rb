@@ -43,7 +43,7 @@ class Vsdf < Formula
 
   test do
     # A simple test to check if the binary runs and shows the version.
-    system "#{bin}/vsdf", "--version"
+    system bin/"vsdf", "--version"
 
     # A more complex test that requires a running Vulkan instance.
     # This will test a 1-frame headless render.
@@ -53,6 +53,6 @@ class Vsdf < Formula
         gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);
       }
     EOS
-    system "#{bin}/vsdf", "--toy", testpath/"test.frag", "--frames", "1", "--headless"
+    system bin/"vsdf", "--toy", testpath/"test.frag", "--frames", "1", "--headless"
   end
 end
