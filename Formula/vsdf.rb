@@ -1,5 +1,5 @@
 class Vsdf < Formula
-  desc "SDF renderer for music shaders"
+  desc "Vulkan SDF Renderer + Video Recorder + Hot Reloader"
   homepage "https://github.com/jamylak/vsdf"
   # Replace this with the latest version tag from your release
   version "v0.1.4"
