@@ -47,8 +47,8 @@ class Vsdf < Formula
     # This will test a 1-frame headless render.
     # It requires the shaders, which we installed to pkgshare.
     (testpath/"test.frag").write <<~EOS
-      void main() {
-        gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);
+      void mainImage( out vec4 fragColor, in vec2 fragCoord ){
+        fragColor = vec4(1.0, 0.0, 0.0, 1.0); // Red
       }
     EOS
     system bin/"vsdf", "--toy", testpath/"test.frag", "--frames", "1", "--headless"
