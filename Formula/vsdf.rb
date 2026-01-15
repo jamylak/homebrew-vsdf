@@ -3,7 +3,7 @@ class Vsdf < Formula
   homepage "https://github.com/jamylak/vsdf"
   # Replace this with the latest version tag from your release
   version "0.2.0"
-  license "GPL"
+  license "GPL-3.0-only"
 
   # These dependencies will be automatically installed by Homebrew if not present
   depends_on "molten-vk" => :on_macos
