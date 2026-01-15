@@ -30,18 +30,11 @@ class Vsdf < Formula
   end
 
   def install
-    # The release archives contain a directory named 'macos' or 'linux'.
-    # We'll install all the contents into libexec to keep them together.
-    on_macos do
-      libexec.install "macos/vsdf"
-      libexec.install "macos/libs"
-      pkgshare.install "macos/shaders"
-    end
-    on_linux do
-      libexec.install "linux/vsdf"
-      libexec.install "linux/libs"
-      pkgshare.install "linux/shaders"
-    end
+    # The release archives contain the executable, libraries, and shaders.
+    # We install them into the appropriate directories.
+    libexec.install "vsdf"
+    libexec.install "libs"
+    pkgshare.install "shaders"
 
     # Create a symlink in the bin directory to the executable in libexec.
     # This is the standard Homebrew practice for binaries with bundled libraries.
