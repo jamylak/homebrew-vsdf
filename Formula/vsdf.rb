@@ -2,7 +2,7 @@ class Vsdf < Formula
   desc "Vulkan SDF Renderer + Video Recorder + Hot Reloader"
   homepage "https://github.com/jamylak/vsdf"
   # Replace this with the latest version tag from your release
-  version "v0.1.4"
+  version "v0.2.0"
   license "GPL"
 
   # These dependencies will be automatically installed by Homebrew if not present
@@ -13,11 +13,11 @@ class Vsdf < Formula
     if Hardware::CPU.intel?
       url "https://github.com/jamylak/vsdf/releases/download/#{version}/vsdf-macos-x86_64.tar.gz"
       # Replace this with the SHA256 checksum of the x86_64 macOS release tarball
-      sha256 "601ea94c231ce11a5c23a6cb18f6197ee34f3939f4da8d645e9689183fcf5d8e"
+      sha256 "24afb799ec3e37034c45e98c652855680599337caec49a3f264a8abe97ea6cc9"
     elsif Hardware::CPU.arm?
       url "https://github.com/jamylak/vsdf/releases/download/#{version}/vsdf-macos-arm64.tar.gz"
       # Replace this with the SHA256 checksum of the arm64 macOS release tarball
-      sha256 "40412be090f8985ccce4f45c24658b48223b5c52a54aae3f22e609610dfbff3b"
+      sha256 "762f19bd7e47107e44acfde01d397d47d731ccc69de7e09278e833ab3b254ad4"
     end
   end
 
@@ -25,7 +25,7 @@ class Vsdf < Formula
     if Hardware::CPU.intel?
       url "https://github.com/jamylak/vsdf/releases/download/#{version}/vsdf-linux-x86_64.tar.gz"
       # Replace this with the SHA256 checksum of the Linux release tarball
-      sha256 "573a9823c0f4a6d4a6ff7904a852b598c85145979462a283857e5e6205eb9771"
+      sha256 "5a02702234e3f7b4434e6089142c1f0b1daf0eb47607cecf728506ce5c1b591c"
     end
   end
 
